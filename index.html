@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Casos COVID - Ejemplo DOM y Asincronismo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    h1 {
+      color: #333;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 8px;
+      text-align: center;
+    }
+    th {
+      background-color: #eee;
+    }
+  </style>
+</head>
+<body>
+  <h1>Casos positivos COVID en EE.UU.</h1>
+  <table id="tabla-covid">
+    <thead>
+      <tr>
+        <th>Fecha</th>
+        <th>Casos Positivos</th>
+      </tr>
+    </thead>
+    <tbody id="cuerpo-tabla">
+      <!-- Datos serán insertados aquí -->
+    </tbody>
+  </table>
+
+  <!-- Vincula el archivo JavaScript -->
+  <script src="labo5.js"></script>
+</body>
+</html>
