@@ -9,28 +9,47 @@ const urlApi = 'https://api.covidtracking.com/v1/us/daily.json';
   try {
     const respuesta = await(await fetch(urlApi)).json();
     console.log('Respuesta exitosa de la API de COVID Tracking', respuesta);
-   
-    console.log(respuesta[0]) 
-    respuesta.forEach(dia => console.log(dia.date, dia.positive)); 
+    //Modificamos la respuesta de la API
+    console.log(respuesta[0]) // mostrar los datos del primer día: ;
+    // Podemos tambien iterar sobre los datos 
+    respuesta.forEach(dia => console.log(dia.date, dia.positive)); //Muestra la fecha (yy-mm-dd) y los casos positivos covid en esa fecha por cada valor
 
 } catch (error) {
     console.error('Error al conectar con la API', error);
   }
 })();
 
+// ---------------------------------------------
 
+const urlApiDOM = 'https://api.covidtracking.com/v1/us/daily.json';
 
-// MNIPULACIÓN DEL DOM EN LA PÁGINA DE LA API
+(async function conectarCovidAPIDOM() {
+  try {
+    const respuesta = await (await fetch(urlApiDOM)).json();
+    console.log('Respuesta exitosa de la API de COVID Tracking', respuesta);
 
-const titulo = document.querySelector("h1.page-title._741b7")
+    const cuerpoTabla = document.getElementById('cuerpo-tabla');
 
-const boton = document.createElement("button")
+    // Mostrar solo los primeros 10 días
+    const primerosDiezDias = respuesta.slice(0, 10);
 
-boton.textContent = "Click aqui"
+    primerosDiezDias.forEach(dia => {
+      const fila = document.createElement('tr');
+      const fecha = document.createElement('td');
+      const positivos = document.createElement('td');
 
-boton.addEventListener("click", () => {
-  alert("Esta página es de una API sobre el COVID");
-})
+      // Convertimos la fecha a formato legible: yyyy-mm-dd
+      const fechaFormateada = `${String(dia.date).substring(0, 4)}-${String(dia.date).substring(4, 6)}-${String(dia.date).substring(6)}`;
+      fecha.textContent = fechaFormateada;
+      positivos.textContent = dia.positive;
 
-titulo.appendChild(boton)
+      fila.appendChild(fecha);
+      fila.appendChild(positivos);
+      cuerpoTabla.appendChild(fila);
+    });
+
+  } catch (error) {
+    console.error('Error al conectar con la API', error);
+  }
+})();
 
