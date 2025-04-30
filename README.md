@@ -13,4 +13,4 @@ Integrantes: Kevin Muñoz, Joshua Morocho, Josué Mejía
 
 ![17460302823251377894879286266848](https://github.com/user-attachments/assets/ea0bd839-d2a8-4210-ab07-943a74657147)
 
-
+Manipulación del DOM donde se crea una tabla con los 10 primeros días
