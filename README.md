@@ -8,3 +8,12 @@ Integrantes: Kevin Muñoz, Joshua Morocho, Josué Mejía
 
 ![image](https://github.com/user-attachments/assets/9f007ee8-5fc6-4aa8-b22a-42688945b1ee)
 
+### DOM
+
+![image](https://github.com/user-attachments/assets/29093be3-8e98-4280-9a9a-f252082cfaa1)
+
+
+![image](https://github.com/user-attachments/assets/5db2e2a3-75cf-42ba-baeb-8c7ec5f6e1d9)
+
+![image](https://github.com/user-attachments/assets/1a08a79a-f4c0-4c99-9d24-7fdbc3563765)
+
